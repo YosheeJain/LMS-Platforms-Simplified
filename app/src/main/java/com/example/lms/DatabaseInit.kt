@@ -30,6 +30,7 @@ class DatabaseInit(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         const val Primary_Instructor = "Primary_Instructor"
     }
 
+    // CREATE
     override fun onCreate(db: SQLiteDatabase) {
         // table 1
         val createTableCOURSE_LIST = "CREATE TABLE IF NOT EXISTS COURSE_LIST (Subject VARCHAR(255),Number INT,Name VARCHAR(255),Description VARCHAR(255),Credit_Hours INT,CRN INT PRIMARY KEY, Instructors VARCHAR(255))"
@@ -40,17 +41,37 @@ class DatabaseInit(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         db.execSQL(createTableGPA)
     }
 
-
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         // Handle database schema upgrades here
     }
 
-    // TO DO -- EDIT insert function, do we need the onUpgrade version??
-//
-//    fun insertData(name: String) {
-//        val db = writableDatabase
-//        val insertQuery = "INSERT INTO MyTable (name) VALUES ('$name')"
-//        db.execSQL(insertQuery)
-//        db.close()
-//    }
+    // INSERT
+    fun insertDataintoCourseList(Subject: String, Number: Int, Name: String, Description: String, Credit_Hours: Int, CRN: Int, Instructors: String) {
+        val db = writableDatabase
+        val insertQuery = "INSERT INTO COURSE_LIST VALUES ('$Subject', $Number, '$Name', '$Description', $Credit_Hours, $CRN, '$Instructors')"
+        db.execSQL(insertQuery)
+        db.close()
+    }
+
+    fun insertDataintoGPA(Subject_GPA: String, Course_Number: Int, CRN_GPA: Int, Course_Title: String, Course_Section: String, Average_Grade: Double, Primary_Instructor: String) {
+        val db = writableDatabase
+        val insertQuery = "INSERT INTO GPA VALUES ('$Subject_GPA', $Course_Number, $CRN_GPA, '$Course_Title', '$Course_Section', $Average_Grade, '$Primary_Instructor')"
+        db.execSQL(insertQuery)
+        db.close()
+    }
+
+    // SELECT
+    fun selectFromCourseList() {
+        val db = writableDatabase
+        val selectQuery = "SELECT * FROM COURSE_LIST"
+        db.execSQL(selectQuery)
+        db.close()
+    }
+
+    fun selectFromGPA() {
+        val db = writableDatabase
+        val selectQuery = "SELECT * FROM GPA"
+        db.execSQL(selectQuery)
+        db.close()
+    }
 }
