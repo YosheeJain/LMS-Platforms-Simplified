@@ -8,17 +8,19 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="285dp"
-        android:layout_height="71dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="29dp" />
+        android:layout_width="283dp"
+        android:layout_height="118dp"
+        android:text="Welcome to LMS Tracker"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="71dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="173dp"
         android:layout_height="55dp"
-        android:text="Button"
+        android:text="Sign In"
         tools:layout_editor_absoluteX="119dp"
         tools:layout_editor_absoluteY="275dp" />
 
@@ -26,7 +28,7 @@
         android:id="@+id/button2"
         android:layout_width="173dp"
         android:layout_height="55dp"
-        android:text="Button"
+        android:text="Sign Up"
         tools:layout_editor_absoluteX="119dp"
         tools:layout_editor_absoluteY="365dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
