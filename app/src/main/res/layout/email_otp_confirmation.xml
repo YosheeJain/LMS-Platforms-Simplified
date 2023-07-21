@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.554"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonConfirmOTP" />
 
     <Button
         android:id="@+id/buttonResendOTP"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.832"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonResendOTP" />
 
     <EditText
         android:id="@+id/editTextOTPEntering"
