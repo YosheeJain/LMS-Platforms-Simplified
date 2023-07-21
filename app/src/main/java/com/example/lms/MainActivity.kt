@@ -1,7 +1,9 @@
 package com.example.lms
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,4 +34,14 @@ class MainActivity : AppCompatActivity() {
 
         // OTHER CODE
     }
+
+        fun onButtonClickSignInMainScreen(view: View) {
+                val intent = Intent(this, SignIn::class.java)
+                startActivity(intent)
+        }
+
+        fun onButtonClickSignUpMainScreen(view: View) {
+                val intent = Intent(this, SignUp::class.java)
+                startActivity(intent)
+        }
 }

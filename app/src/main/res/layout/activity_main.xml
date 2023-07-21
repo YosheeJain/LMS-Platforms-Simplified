@@ -7,28 +7,38 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textWelcomeMainActivity"
         android:layout_width="283dp"
         android:layout_height="118dp"
         android:text="Welcome to LMS Tracker"
         android:textAlignment="center"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="71dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSignInMainActivity"
         android:layout_width="173dp"
         android:layout_height="55dp"
         android:text="Sign In"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="275dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366"
+        android:onClick="onButtonClickSignInMainScreen" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonSignUpMainActivity"
         android:layout_width="173dp"
         android:layout_height="55dp"
+        android:onClick="onButtonClickSignUpMainScreen"
         android:text="Sign Up"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
